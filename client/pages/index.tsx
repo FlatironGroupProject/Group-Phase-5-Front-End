@@ -142,7 +142,7 @@ export default function LaunchPage({ loggedIn, currUser }: LaunchPageProps ) {
               />
             </div>
             <input
-              className='bg-goblue text-black font-bold py-1 px-4 rounded cursor-pointer'
+              className='bg-goblue text-maize font-bold py-1 px-4 rounded cursor-pointer'
               id='signup-btn'
               type='submit'
               value='Sign up'
@@ -151,7 +151,7 @@ export default function LaunchPage({ loggedIn, currUser }: LaunchPageProps ) {
 
           {/* ++++ BACK TO LOGIN FROM BUTTON ++++ */}
           <button
-            className='bg-goblue text-black font-bold py-1 px-4 rounded cursor-pointer mt-4'
+            className='bg-goblue text-maize font-bold py-1 px-4 rounded cursor-pointer mt-4'
             onClick={toggleSignupForm}
           >
             Back to Login
