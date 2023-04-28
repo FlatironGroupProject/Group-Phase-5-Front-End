@@ -1,7 +1,4 @@
-import Layout from '../components/Layout';
-
-
-        // ++++ TS TYPES FOR PROPS BEING PASSED TO THIS PAGE ++++
+// ++++ TS TYPES FOR PROPS BEING PASSED TO THIS PAGE ++++
 interface HomeProps {
     currUser: any;
   }
@@ -15,11 +12,9 @@ interface HomeProps {
     // }
   
   return (
-    <Layout>
-      <div className="p-4 mb-8 rounded-lg">
-      {/* {currUser.username} ADD TO THE WELCOME MESSAGE TO PASS USERNAME WHEN CURRUSER IS UNCOMMENTED*/}
-          <p className="text-3xl font-bold text-goblue">Welcome </p>
-      </div>
-    </Layout>
+    <div className="p-4 mb-8 rounded-lg">
+    {/* {currUser.username} ADD TO THE WELCOME MESSAGE TO PASS USERNAME WHEN CURRUSER IS UNCOMMENTED*/}
+        <p className="text-3xl font-bold text-goblue">Welcome </p>
+    </div>
   );
 }

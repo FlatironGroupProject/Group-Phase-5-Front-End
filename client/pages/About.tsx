@@ -1,10 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
 
 const About: React.FC = () => {
   return (
-    <Layout>
     <div className="min-h-screen bg-gray-100 flex items-center justify-center pt-32">
       <Head>
         <title>About Us | WorkWell</title>
@@ -24,13 +22,12 @@ const About: React.FC = () => {
           We'd love to hear from you! If you have any questions or would like to
           learn more about LunarBreeze, please don't hesitate to contact us at
           {' '}
-          <a href="mailto:support@Ultima.com" className="text-blue-300 hover:text-blue-200">
+          <a href="mailto:support@Ultima.com" className="text-goblue hover:text-blue-200">
             support@WorkWell.com
           </a>.
         </p>
       </div>
     </div>
-    </Layout>
   );
 };
 
