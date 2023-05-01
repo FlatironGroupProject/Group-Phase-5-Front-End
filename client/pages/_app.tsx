@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css'
-// import '../styles/globals.css'
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
 
@@ -38,8 +38,10 @@ function MyApp({ Component, pageProps }) {
  
 
   return (
-      <Component {...pageProps} currUser={currUser} loggedIn={loggedIn}/>
-  )
+    <Layout>
+        <Component {...pageProps} currUser={currUser} loggedIn={loggedIn}/>
+    </Layout>
+    )
 }
 
 export default MyApp;

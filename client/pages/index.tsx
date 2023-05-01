@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Layout from '../components/Layout';
 
 
         //  ++++ TS TYPES FOR PROPS BEING PASSED TO THIS PAGE ++++
@@ -88,7 +87,6 @@ export default function LaunchPage({ loggedIn, currUser }: LaunchPageProps ) {
   } else {
 
   return (
-  <Layout>
     <div className='p-20 rounded-lg shadow-2xl'>
 
       {/* ++++++ LOGIN FORM SHOWS FIRST EVEN THOUGH SIGNUP IS FIRST IN CODE, STATE WILL CHANGE TO SIGN UP FORM ON CLICK OF SIGN UP BUTTON ++++++ */}
@@ -204,5 +202,4 @@ export default function LaunchPage({ loggedIn, currUser }: LaunchPageProps ) {
         </>
       )}
     </div>
-    </Layout>
   )}}
