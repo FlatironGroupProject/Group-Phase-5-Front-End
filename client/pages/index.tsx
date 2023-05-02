@@ -20,11 +20,9 @@ export default function LaunchPage({ loggedIn, currUser }: LaunchPageProps ) {
     return <div>Redirecting...</div>;
   } else {
     return (
-      <Layout>
         <div className='p-20 rounded-lg shadow-2xl'>
           <h2 className='text-3xl font-bold text-black mb-8'>Welcome to my website</h2>
         </div>
-      </Layout>
     );
   }
 }
