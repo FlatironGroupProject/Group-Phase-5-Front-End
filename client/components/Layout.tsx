@@ -4,11 +4,8 @@ import Sidebar from "./Sidebar"
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-        <Sidebar/>
-      <div>
-        <Navbar />
+        <Navbar/>
         <main>{children}</main>
-      </div>
     </>
   )
 }

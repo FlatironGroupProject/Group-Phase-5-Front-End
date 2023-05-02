@@ -1,30 +1,76 @@
 .sidebar{
     margin-top: 100px;
     margin-right: 50px;
-    width:100px;
+    width:122px;
     position:fixed;
     height:100%;
     overflow:auto;
     margin: 0;
     padding-top: 100px;
     background-color: #f1f1f1;
-  }
-  
-  .sidebar-item{
-    display: block;
-    padding: 8px 16px;
-    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  li .link:hover {
-    background-color: #fad390;
-    color: #fff;
-  }
+.sidebar-item{
+  display: block;
+  padding: 8px 16px;
+  color: #000;
+}
 
-  .show-button{
-    margin-top: 100px;
-    width:100px;
-    display: block;
-    position:fixed;
+li .link:hover {
+  background-color: #fad390;
+  color: #fff;
+}
 
-  }
+.show-button{
+  margin-top: 100px;
+  width:100px;
+  display: block;
+  position:fixed;
+
+}
+
+
+
+
+.profile-pic-container{
+  /* float:left; */
+  padding-right: 10px;
+  /* width:20%; */
+}
+#bio{
+  width:100%;
+}
+
+.user-page{
+  padding-left: 160px;
+  height: 100%;
+
+}
+
+#user-info{
+  height: 80%;
+  max-width: 50%;
+  margin-top: 150px;
+  align-items: center;
+  /* position: relative; */
+}
+
+
+.float-user-elements{
+  width:50%;
+  float:left;
+}
+
+/* I assigned percent heights to these so that percentage based heights work on their children (used above) */
+html,
+body,main {
+  height: 100%;
+}
+
+#__next{
+  height: 100%;
+
+}
