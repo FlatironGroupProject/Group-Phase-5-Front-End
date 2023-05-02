@@ -1,5 +1,6 @@
 .sidebar{
     margin-top: 100px;
+    margin-right: 50px;
     width:100px;
     position:fixed;
     height:100%;
@@ -18,4 +19,12 @@
   li .link:hover {
     background-color: #fad390;
     color: #fff;
+  }
+
+  .show-button{
+    margin-top: 100px;
+    width:100px;
+    display: block;
+    position:fixed;
+
   }
