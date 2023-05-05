@@ -3,21 +3,39 @@ import image1 from "../pages/(public)/download.jpg"
 import Image from 'next/image'
 import {useParams} from "next/navigation"
 import { useRouter } from "next/router"
-export default function UserProfile(){
+export default function UserProfile({isMyProfile}){
     const inputFile = useRef(null)
     const [file, setFile] = useState<File>();
     const [imgURL, setimgURL] = useState(null)
     const router = useRouter()
-    const {username} = router.query
-    let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
-    const [user, setUser] = useState(temp)
-    const [loaded, setLoaded] = useState(false)
+    let username = null
+    if (isMyProfile){
+        //In future, add a fetch/get here to get username from cookies or database
+        username="testing"
+    }
+    else{
+        username = router.query["username"]
+    }
 
+
+    let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
+
+    const [user, setUser] = useState(temp)
+    const [loaded, setLoaded] = useState(true)
+
+    // For use once hooked up to backend
     // useEffect(()=>{
     //     fetch("databaseurl/users/{id}").then(resp=>{if resp.status ==404 return null;return resp.json()})
     //      .then(u=>setUser(u)).then(_=>setLoaded(true))
     // },[])
 
+    // Avoids issue of username being undefined since router.query is async function. 
+    useEffect(()=>{
+            let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
+            setUser(temp)
+            return;
+
+    },[username])
 
     function handleAvatarChange(e: ChangeEvent<HTMLInputElement>){
         

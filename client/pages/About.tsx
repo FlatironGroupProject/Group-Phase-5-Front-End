@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 
 const About: React.FC = () => {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>About Us | WorkWell</title>
       </Head>
@@ -31,7 +31,7 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
-    </Layout>
+      </div>
   );
 };
 
