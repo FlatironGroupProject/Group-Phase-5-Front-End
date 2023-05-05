@@ -1,7 +1,6 @@
 import { useRef, useState, ChangeEvent, useEffect } from "react"
 import image1 from "../pages/(public)/download.jpg"
 import Image from 'next/image'
-import {useParams} from "next/navigation"
 import { useRouter } from "next/router"
 export default function UserProfile({isMyProfile}){
     const inputFile = useRef(null)
@@ -9,6 +8,10 @@ export default function UserProfile({isMyProfile}){
     const [imgURL, setimgURL] = useState(null)
     const router = useRouter()
     let username = null
+    let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
+    const [user, setUser] = useState(temp)
+    const [loaded, setLoaded] = useState(true)
+
     if (isMyProfile){
         //In future, add a fetch/get here to get username from cookies or database
         username="testing"
@@ -17,11 +20,6 @@ export default function UserProfile({isMyProfile}){
         username = router.query["username"]
     }
 
-
-    let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
-
-    const [user, setUser] = useState(temp)
-    const [loaded, setLoaded] = useState(true)
 
     // For use once hooked up to backend
     // useEffect(()=>{
