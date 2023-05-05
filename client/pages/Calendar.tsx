@@ -8,14 +8,12 @@ function CalendarPage() {
   const currentDate = new Date();
 
   return (
-    <Layout>
       <div className="h-screen">
         <Calendar
           date={currentDate}
           onChange={date => console.log(date)}
         />
       </div>
-    </Layout>
   );
 }
 
