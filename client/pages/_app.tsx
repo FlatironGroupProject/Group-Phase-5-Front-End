@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout';
-import "../styles/sidebar.css"
+import "../styles/userprofile.css"
 function MyApp({ Component, pageProps }) {
 
   const [currUser, setCurrUser] = useState(null);

@@ -9,10 +9,13 @@ export default function UserProfile(){
     const [imgURL, setimgURL] = useState(null)
     const router = useRouter()
     const {username} = router.query
-    // const username = useParams();
+    let temp = {"username":username, "email":`${username}@gmail.com`, "bio":"im a cool dude"}
+    const [user, setUser] = useState(temp)
+    const [loaded, setLoaded] = useState(false)
 
     // useEffect(()=>{
-    //     fetch("databaseurl/{id}")
+    //     fetch("databaseurl/users/{id}").then(resp=>{if resp.status ==404 return null;return resp.json()})
+    //      .then(u=>setUser(u)).then(_=>setLoaded(true))
     // },[])
 
 
@@ -51,13 +54,13 @@ export default function UserProfile(){
 
         
     }
-
+    
     return (
         <div className="user-page min-h-screen bg-gray-100 justify-center pt-32">
             <div id="user-info" className=" float-user-elements">
                 <div className="text-3xl text-center break-words pb-2">Name:</div>
                 <div id = "username" className="text-3xl text-center break-words pb-2">username:{username}</div>
-                <div id = "email" className="text-3xl text-center break-words pb-2">email:placeholder{username}@gmail.com</div>
+                <div id = "email" className="text-3xl text-center break-words pb-2">email:{loaded?user["email"]:"placeholder" }</div>
                 <div id = "message" className="text-3xl text-center break-words"> <button onClick={handleMessage}>message me</button></div>
             </div>
             <div className="profile-pic-container float-user-elements">
@@ -66,7 +69,7 @@ export default function UserProfile(){
                 <br></br>
                 <input type="file" onChange={handleAvatarChange}/>
                 <Image onClick={()=>{console.log("image clicked")}} src = {image1} width='400' height='300' alt="hey" id = "profile-pic"/>
-                <div id = "bio">This is where we pull description of the user, made by them</div>
+                <div id = "bio">{loaded? user["bio"]:"This is where we pull description of the user, made by them"}</div>
             </div>
         </div>
   )
